@@ -155,6 +155,3 @@ C++17 is required, and Qt's Widgets and Network modules are linked into the appl
 - This application is intended for informational conversion purposes and does not initiate transfers or provide financial advice.
 - No exchange-rate history or charting is currently included.
 
-## License
-
-No license file is currently included in this repository. Unless a license file is added, all rights are reserved by the copyright holder.
