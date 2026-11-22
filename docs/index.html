@@ -1,16 +1,22 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>首頁 – CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具，使用 Wise 的即時匯率，以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head><body>
-<header><nav><a class="brand" href="index.html">💱 CurrencyConverter</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="rates.html">匯率資料</a><a href="build.html">建置</a></nav></header><main>
-<section class="hero"><div class="lock">💱</div><h1>CurrencyConverter</h1>
-<p>輕量桌面匯率換算工具，以 C++、Qt 6 與 CMake 製作。從 Wise 取得幣別資料與即時匯率。</p>
-<a class="btn" href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest/download/CurrencyConverter.zip" download>立即下載</a><a class="btn alt" href="usage.html">使用方式</a><a class="btn alt" href="rates.html">匯率資料</a></section>
-<div class="grid">
-<div class="card"><h3>可搜尋的幣別選單</h3><p>以代碼或名稱搜尋，不分大小寫；常用幣別也有中文名稱。</p></div>
-<div class="card"><h3>一鍵交換</h3><p>快速對調來源與目標幣別。</p></div>
-<div class="card"><h3>自動更新</h3><p>視窗在前景時，每 60 秒更新匯率。</p></div>
-<div class="card"><h3>60 秒快取</h3><p>減少不必要的網路請求。</p></div>
-<div class="card"><h3>依幣別格式化</h3><p>零小數位幣別（例如日圓）取整數，三小數位幣別顯示三位。</p></div>
-<div class="card"><h3>離線備用清單</h3><p>幣別清單載入失敗時使用內建清單。</p></div>
-<div class="card"><h3>記住上次設定</h3><p>下次啟動沿用幣別與金額。</p></div>
-<div class="card"><h3>深色介面</h3><p>精簡的深色主題。</p></div></div>
-</main><footer>MIT License · <a href="https://github.com/neil289506-commits/CurrencyConverter">GitHub</a><br>與 Wise 無關聯。匯率僅供參考。</footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>首頁 · CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具,使用 Wise 的即時匯率,以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head>
+<body data-repo="neil289506-commits/CurrencyConverter"><canvas id="bg" data-mode="aurora"></canvas><div class="vignette"></div><div class="glow"></div>
+<nav><a class="logo" href="index.html"><img src="assets/logo.svg" alt="">CurrencyConverter</a><a class="l on" href="index.html">首頁</a><a class="l" href="usage.html">使用方式</a><a class="l" href="rates.html">匯率資料</a><a class="l" href="build.html">建置</a><a class="gh" href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">GitHub ↗</a><a class="dl" data-dl href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">⬇ 最新版 <span class="vt" data-tag></span></a></nav>
+<section class="hero"><span class="badge"><i></i>桌面匯率換算工具 · Open Source</span><h1>CurrencyConverter<br>輕量、即時,<span class="g">一鍵換算全球幣別</span></h1><p class="lead">以 C++、Qt 6 與 CMake 製作的桌面匯率換算工具。從 Wise 取得幣別資料與即時匯率,深色介面、60 秒快取、離線備用清單。</p><div class="cta"><a class="btn p" data-dl href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">⬇ 下載最新版 <small data-tag></small></a><a class="btn" href="usage.html">📖 使用方式</a><a class="btn" href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">★ GitHub</a></div><div class="stats"><div><b>60s</b><span>自動更新間隔</span></div><div><b>Qt 6</b><span>C++17 製作</span></div><div><b>MIT</b><span>開源授權</span></div></div></section>
+<div class="marquee"><div><span>USD</span><span>TWD</span><span>JPY</span><span>EUR</span><span>GBP</span><span>CNY</span><span>KRW</span><span>HKD</span><span>Wise</span><span>Qt 6</span><span>CMake</span><span>MSVC 2022</span><span>USD</span><span>TWD</span><span>JPY</span><span>EUR</span><span>GBP</span><span>CNY</span><span>KRW</span><span>HKD</span><span>Wise</span><span>Qt 6</span><span>CMake</span><span>MSVC 2022</span></div></div>
+<section id="try"><h2 class="reveal">試玩:匯率換算</h2><p class="sub reveal">輸入金額、搜尋幣別、按交換鈕,體驗零小數位與三小數位幣別的格式化。</p><div class="panel reveal" id="demo">
+<div class="dm-grid">
+ <div><label>來源幣別(可輸入代碼或名稱搜尋)</label><input id="fs" list="cl" value="USD"></div>
+ <div><label>金額</label><input id="amt" type="number" value="1000" min="0"></div>
+ <div><label>目標幣別</label><input id="ts" list="cl" value="TWD"></div>
+</div>
+<datalist id="cl"></datalist>
+<div class="dm-row" style="margin:16px 0"><button class="btn s" id="sw">⇄ 交換</button><button class="btn s p" id="rf">↻ Refresh</button><span id="ts2" style="color:var(--mut);font-size:.85rem"></span></div>
+<div class="out" id="res" style="font-size:1.6rem"></div>
+<p id="rt" style="color:var(--mut);margin-top:10px;font-size:.9rem"></p>
+<p class="legal" style="color:var(--mut)">※ 此處使用內建的示意匯率,僅展示介面行為;實際程式會向 Wise 取得即時匯率。</p>
+</div></section>
+<section><h2 class="reveal">核心功能</h2><p class="sub reveal">一眼看懂 CurrencyConverter 能做什麼。</p><div class="grid"><div class="card reveal"><div class="ic">🔎</div><h3>可搜尋的幣別選單</h3><p>以代碼或名稱搜尋,不分大小寫;常用幣別也有中文名稱。</p></div><div class="card reveal"><div class="ic">⇄</div><h3>一鍵交換</h3><p>快速對調來源與目標幣別。</p></div><div class="card reveal"><div class="ic">⏱</div><h3>自動更新</h3><p>視窗在前景時,每 60 秒更新匯率。</p></div><div class="card reveal"><div class="ic">🗄</div><h3>60 秒快取</h3><p>減少不必要的網路請求。</p></div><div class="card reveal"><div class="ic">🔢</div><h3>依幣別格式化</h3><p>零小數位幣別(例如日圓)取整數,三小數位幣別顯示三位。</p></div><div class="card reveal"><div class="ic">📴</div><h3>離線備用清單</h3><p>幣別清單載入失敗時使用內建清單。</p></div><div class="card reveal"><div class="ic">💾</div><h3>記住上次設定</h3><p>下次啟動沿用幣別與金額。</p></div><div class="card reveal"><div class="ic">🌙</div><h3>深色介面</h3><p>精簡的深色主題。</p></div></div><div class="cta" style="margin-top:34px"><a class="btn" href="usage.html">了解更多 →</a></div></section>
+<section><div class="panel reveal" style="text-align:center;padding:60px 28px"><h2>準備好了嗎?</h2><p class="sub" style="margin:0 auto 24px">直接下載最新版本,或自行從原始碼建置。</p><div class="cta" style="justify-content:center"><a class="btn p" data-dl href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">⬇ 下載最新版 <small data-tag></small></a><a class="btn" href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">前往 GitHub</a></div></div></section>
+<footer><div class="g">CurrencyConverter</div><p>MIT License · 與 Wise 無關聯,匯率僅供參考 · 由 neil289506-commits 開發</p><p><a href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">原始碼</a> · <a href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">最新版本</a> · <a href="https://github.com/neil289506-commits/CurrencyConverter/releases" target="_blank" rel="noopener">所有 Releases</a></p></footer>
+<script src="js/fx.js"></script><script src="js/demo.js"></script></body></html>

@@ -1,13 +1,11 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>匯率資料 – CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具，使用 Wise 的即時匯率，以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head><body>
-<header><nav><a class="brand" href="index.html">💱 CurrencyConverter</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="rates.html">匯率資料</a><a href="build.html">建置</a></nav></header><main>
-<h1>匯率資料</h1><p>程式預設呼叫下列兩個 Wise 端點：</p>
-<pre><code>https://wise.com/gateway/v1/currencies
-https://wise.com/rates/live?source=&lt;SOURCE&gt;&amp;target=&lt;TARGET&gt;</code></pre>
-<div class="note">這是 Wise 網站本身使用的端點，不是 Wise 公開提供的正式 API，Wise 日後可能變更或限制。</div>
-<h2>備用清單</h2><p>幣別清單請求失敗或無法解析時，改用 <code>src/FallbackCurrencies.h</code> 內建的清單。即時匯率仍需要連線到 Wise。</p>
-<h2>自訂主機</h2><p>開發或測試時可用環境變數 <code>WISE_BASE_URL</code> 改變主機；該主機需提供相容的 <code>/gateway/v1/currencies</code> 與 <code>/rates/live</code>。</p>
-<pre><code># PowerShell
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>匯率資料 · CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具,使用 Wise 的即時匯率,以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head>
+<body data-repo="neil289506-commits/CurrencyConverter"><canvas id="bg" data-mode="aurora"></canvas><div class="vignette"></div><div class="glow"></div>
+<nav><a class="logo" href="index.html"><img src="assets/logo.svg" alt="">CurrencyConverter</a><a class="l" href="index.html">首頁</a><a class="l" href="usage.html">使用方式</a><a class="l on" href="rates.html">匯率資料</a><a class="l" href="build.html">建置</a><a class="gh" href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">GitHub ↗</a><a class="dl" data-dl href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">⬇ 最新版 <span class="vt" data-tag></span></a></nav>
+<section class="page-h"><span class="badge"><i></i>Data</span><h1 style="font-size:clamp(2.2rem,5vw,4rem);margin-top:16px"><span class="g">匯率</span>資料</h1><p class="lead">程式預設呼叫兩個 Wise 端點取得幣別與即時匯率。</p></section>
+<section style=padding-top:20px><h2 class="reveal">使用的端點</h2><div class="panel reveal"><p>程式預設呼叫下列兩個 Wise 端點:</p><pre>https://wise.com/gateway/v1/currencies
+https://wise.com/rates/live?source=&lt;SOURCE&gt;&amp;target=&lt;TARGET&gt;</pre><div class="note reveal">這是 Wise 網站本身使用的端點,不是 Wise 公開提供的正式 API,Wise 日後可能變更或限制。</div></div></section><section><h2 class="reveal">備用清單</h2><div class="panel reveal"><p>幣別清單請求失敗或無法解析時,改用 <code>src/FallbackCurrencies.h</code> 內建的清單。即時匯率仍需要連線到 Wise。</p></div></section><section><h2 class="reveal">自訂主機</h2><div class="panel reveal"><p>開發或測試時可用環境變數 <code>WISE_BASE_URL</code> 改變主機;該主機需提供相容的 <code>/gateway/v1/currencies</code> 與 <code>/rates/live</code>。</p><pre># PowerShell
 $env:WISE_BASE_URL = "https://example.test"
-.\build\Release\CurrencyConverter.exe</code></pre>
-</main><footer>MIT License · <a href="https://github.com/neil289506-commits/CurrencyConverter">GitHub</a><br>與 Wise 無關聯。匯率僅供參考。</footer><script src="js/main.js"></script></body></html>
+.\build\Release\CurrencyConverter.exe</pre></div></section>
+<footer><div class="g">CurrencyConverter</div><p>MIT License · 與 Wise 無關聯,匯率僅供參考 · 由 neil289506-commits 開發</p><p><a href="https://github.com/neil289506-commits/CurrencyConverter" target="_blank" rel="noopener">原始碼</a> · <a href="https://github.com/neil289506-commits/CurrencyConverter/releases/latest" target="_blank" rel="noopener">最新版本</a> · <a href="https://github.com/neil289506-commits/CurrencyConverter/releases" target="_blank" rel="noopener">所有 Releases</a></p></footer>
+<script src="js/fx.js"></script></body></html>
