@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建置 – CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具，使用 Wise 的即時匯率，以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a class="brand" href="index.html">💱 CurrencyConverter</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="rates.html">匯率資料</a><a href="build.html">建置</a></nav></header><main>
+<h1>建置</h1><p>需要 CMake 3.21+、支援 C++17 的編譯器、Qt 6.4+（Widgets、Network）。主要目標是 Windows、MSVC 2022 64 位元與 Qt 6.11。</p>
+<pre><code>cmake -S . -B build -DCMAKE_PREFIX_PATH="C:/Qt/6.11.0/msvc2022_64"
+cmake --build build --config Release
+# 輸出：build/Release/CurrencyConverter.exe</code></pre>
+<p>專案啟用嚴格警告：MSVC 用 <code>/W4 /permissive- /utf-8</code>，其他編譯器用 <code>-Wall -Wextra -Wpedantic</code>。</p>
+</main><footer>MIT License · <a href="https://github.com/neil289506-commits/CurrencyConverter">GitHub</a><br>與 Wise 無關聯。匯率僅供參考。</footer><script src="js/main.js"></script></body></html>

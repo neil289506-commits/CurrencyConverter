@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使用方式 – CurrencyConverter</title><meta name="description" content="輕量桌面匯率換算工具，使用 Wise 的即時匯率，以 C++ 與 Qt 6 製作"><link rel="icon" href="assets/favicon.ico"><link rel="stylesheet" href="css/style.css"></head><body>
+<header><nav><a class="brand" href="index.html">💱 CurrencyConverter</a><a href="index.html">首頁</a><a href="usage.html">使用方式</a><a href="rates.html">匯率資料</a><a href="build.html">建置</a></nav></header><main>
+<h1>使用方式</h1><ol><li>選擇或搜尋來源幣別。</li><li>輸入金額。</li><li>選擇或搜尋目標幣別。</li><li>查看換算結果與顯示的匯率。</li><li>按交換鈕對調方向。</li><li>按「Refresh」立即取得新匯率。</li></ol>
+<p>第一次啟動時，預設是 <code>USD</code> → <code>TWD</code>，金額 <code>1000</code>；之後會沿用你上次的設定。</p>
+<h2>顯示規則</h2><ul><li>來源與目標相同時，匯率為 1，不會發出網路請求。</li><li>零小數位幣別取整數；多數幣別顯示兩位小數；定義為三位小數的幣別顯示三位。</li><li>匯率時間戳記取自匯率端點回傳的值（若有）。</li></ul>
+</main><footer>MIT License · <a href="https://github.com/neil289506-commits/CurrencyConverter">GitHub</a><br>與 Wise 無關聯。匯率僅供參考。</footer><script src="js/main.js"></script></body></html>
